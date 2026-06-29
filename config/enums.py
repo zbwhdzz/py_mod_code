@@ -1,0 +1,50 @@
+from enum import Enum
+
+class DownloadStatus(str, Enum):
+    SUCCESS = "success"
+    SKIPPED_DOWNLOADED = "skipped_downloaded"
+    SKIPPED_FILTER = "skipped_filter"
+    SKIPPED_DUPLICATE = "skipped_duplicate"
+    FAILED = "failed"
+    PAUSED = "paused"
+    RETRYING = "retrying"
+
+class ProxyStrategy(str, Enum):
+    ROUND_ROBIN = "round_robin"
+    RANDOM = "random"
+    LEAST_USED = "least_used"
+
+class DeviceType(str, Enum):
+    PC = "pc"
+    ANDROID = "android"
+    IPHONE = "iphone"
+
+class OutputFormat(str, Enum):
+    TXT = "txt"
+    JSON = "json"
+    EPUB = "epub"
+    PDF = "pdf"
+
+class CatalogMode(str, Enum):
+    AUTO = "auto"
+    SINGLE = "single"
+    MULTI = "multi"
+
+class BatchMode(str, Enum):
+    AUTO = "auto"
+    SINGLE = "single"
+    BATCH = "batch"
+
+class RefererPolicy(str, Enum):
+    AUTO = "auto"
+    HOME = "home"
+    NONE = "none"
+
+class AntiCrawlLevel(str, Enum):
+    NORMAL = "normal"
+    DELAY = "delay"
+    UA_ROTATE = "ua_rotate"
+    PROXY = "proxy"
+    TLS_ROTATE = "tls_rotate"
+    BROWSER = "browser"
+    CAPTCHA = "captcha"
